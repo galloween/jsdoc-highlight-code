@@ -1,0 +1,53 @@
+{
+    "name": "jsdoc-highlight-code",
+    "displayName": "JSDoc syntax highlighting",
+    "description": "Adds syntax highlighting to JSDoc comments (JS, TS, HTML, CSS, SCSS)",
+    "version": "0.0.1",
+    "publisher": "galloween",
+    "galleryBanner": {
+        "color": "#ffffff",
+        "theme": "light"
+    },
+    "engines": {
+        "vscode": "^1.39.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "keywords": [
+        "javascript",
+        "typescript",
+        "jsdoc",
+        "comment",
+        "markdown"
+    ],
+    "contributes": {
+        "grammars": [
+            {
+                "scopeName": "documentation.injection.ts",
+                "path": "./syntaxes/jsdoc.ts.injection.tmLanguage.json",
+                "injectTo": [
+                    "source.ts",
+                    "source.tsx"
+                ]
+            },
+            {
+                "scopeName": "documentation.injection.js.jsx",
+                "path": "./syntaxes/jsdoc.js.injection.tmLanguage.json",
+                "injectTo": [
+                    "source.js",
+                    "source.js.jsx"
+                ]
+            }
+        ]
+    },
+    "devDependencies": {
+        "@types/node": "^10.5.1",
+        "vscode": "^1.1.36"
+    },
+    "scripts": {
+    },
+    "dependencies": {
+        "@vscode/vsce": "^2.15.0"
+    }
+}
