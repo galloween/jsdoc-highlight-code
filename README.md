@@ -4,7 +4,7 @@ Adds syntax highlighting to JSDoc comments (JS, TS, HTML, CSS, SCSS).
 Supports @example and fenced code blocks.
 
 This is a modified version of this abandoned extension:
-[JSDoc Markdown highlighting](https://github.com/mjbvz/vscode-jsdoc-markdown-highlighting)
+[JSDoc Markdown highlighting](https://github.com/mjbvz/vscode-jsdoc-markdown-highlighting) by @mjbvz.
 
 Comments like these should have code syntax highlighting:
 

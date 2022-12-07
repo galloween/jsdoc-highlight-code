@@ -8,6 +8,9 @@
         "color": "#ffffff",
         "theme": "light"
     },
+    "repository": {
+        "url": "https://github.com/galloween/jsdoc-highlight-code.git"
+    },
     "engines": {
         "vscode": "^1.39.0"
     },
