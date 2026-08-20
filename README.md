@@ -56,7 +56,8 @@ function helloWorld() {}
 To build and install it yourself:
 
 ```bash
-npm run package   # or: python3 build-vsix.py
+npm install
+npm run package
 ```
 
 This produces `jsdoc-highlight-code-<version>.vsix`. Then in the editor: Command Palette → **Extensions: Install from VSIX…** and pick that file.

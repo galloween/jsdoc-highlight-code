@@ -52,6 +52,9 @@
         ]
     },
     "scripts": {
-        "package": "python3 build-vsix.py"
+        "package": "npx --yes @vscode/vsce package"
+    },
+    "devDependencies": {
+        "@vscode/vsce": "^3.2.0"
     }
 }

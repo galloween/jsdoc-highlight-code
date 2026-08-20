@@ -6,23 +6,22 @@ Guidance for AI agents and contributors working in this repo.
 
 A grammar-only editor extension: TextMate injection grammars that highlight the code
 inside JSDoc/TSDoc comments. There is **no TypeScript, no build step, and no runtime
-code** — just JSON grammars in `syntaxes/`, contributed via `package.json`. It has no
-npm dependencies.
+code** — just JSON grammars in `syntaxes/`, contributed via `package.json`. The only
+dev dependency is the packaging tool.
 
 ## Building the .vsix
 
-Use the bundled script, **not** `vsce package`:
-
 ```bash
-npm run package        # runs: python3 build-vsix.py
+npm run package        # runs: npx --yes @vscode/vsce package
 ```
 
-`vsce package` (and `vsce ls`) silently produce an **empty** `.vsix` here: the manifest
-is written but every `extension/` file is dropped (a yazl streaming failure under current
-Node). `build-vsix.py` assembles the `.vsix` structure directly and validates it. It reads
-the name and version from `package.json`, so bump the version there first.
+This produces `jsdoc-highlight-code-<version>.vsix`. `vsce` reads the name and version
+from `package.json`, so bump the version there first. The built `.vsix` is gitignored on
+purpose — it is not committed; build it when you need it.
 
-The built `.vsix` is gitignored on purpose — it is not committed. Build it when you need it.
+> Note: this repo was originally pinned to `@vscode/vsce@2.15.0`, which is broken on
+> current Node (it produces an empty `.vsix`). Use a modern `vsce` (3.x) — the version in
+> `devDependencies` — which packages correctly.
 
 ## Releasing
 
