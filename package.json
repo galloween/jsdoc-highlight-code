@@ -2,15 +2,22 @@
     "name": "jsdoc-highlight-code",
     "displayName": "JSDoc syntax highlighting",
     "description": "Adds syntax highlighting to JSDoc comments (JS, TS, HTML, CSS, SCSS)",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "publisher": "galloween",
+    "license": "MIT",
+    "icon": "media/icon.png",
     "galleryBanner": {
         "color": "#ffffff",
         "theme": "light"
     },
     "repository": {
+        "type": "git",
         "url": "https://github.com/galloween/jsdoc-highlight-code.git"
     },
+    "bugs": {
+        "url": "https://github.com/galloween/jsdoc-highlight-code/issues"
+    },
+    "homepage": "https://github.com/galloween/jsdoc-highlight-code#readme",
     "engines": {
         "vscode": "^1.39.0"
     },
@@ -44,13 +51,7 @@
             }
         ]
     },
-    "devDependencies": {
-        "@types/node": "^10.5.1",
-        "vscode": "^1.1.36"
-    },
     "scripts": {
-    },
-    "dependencies": {
-        "@vscode/vsce": "^2.15.0"
+        "package": "python3 build-vsix.py"
     }
 }
